@@ -15,7 +15,11 @@ import { FormattedMessage } from 'react-intl';
 import { RiArrowRightSLine } from 'src/components/reactIcons';
 import { Link } from 'react-router-dom';
 import { WatchListStartFull } from 'src/components/icon/WatchListStar';
-import { ALL_STABLE_POOL_IDS } from 'src/services/near';
+import {
+  ALL_STABLE_POOL_IDS,
+  DEGEN_POOL_ID,
+  DEGEN_POOL_ID1,
+} from 'src/services/near';
 import { FarmStampNew, TokenRisk } from 'src/components/icon';
 import { TknIcon } from 'src/components/icon/Common';
 
@@ -269,7 +273,9 @@ function MobilePoolRow({
                 {mark ? (
                   <span className="max-w-min  whitespace-nowrap text-xs text-v3SwapGray bg-watchMarkBackgroundColor px-2.5 py-px rounded-xl ml-2 mb-0.5">
                     {ALL_STABLE_POOL_IDS.indexOf(pool.id.toString()) > -1
-                      ? 'Stable'
+                      ? [DEGEN_POOL_ID, DEGEN_POOL_ID1].includes(pool.id)
+                        ? 'Degen'
+                        : 'Stable'
                       : 'Classic'}
                   </span>
                 ) : null}
