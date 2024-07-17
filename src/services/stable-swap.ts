@@ -471,7 +471,7 @@ export const calc_d = (amp: number, c_amounts: number[]) => {
     d = numerator / denominator;
     if (Math.abs(d - d_prev) <= 1) break;
   }
-  return d;
+  return isNaN(d) ? 0 : d;
 };
 
 export const calc_y = (
