@@ -827,7 +827,7 @@ export function getExtraStablePoolConfig(
           'usdt.fakes.testnet': 0,
           'usdtt.fakes.testnet': 1,
         },
-        RATED_POOLS_IDS: ['568', '571', '1044', '1751', '1752', '1843'],
+        RATED_POOLS_IDS: ['568', '571', '1044', '1751', '1752', '1843', '1919'],
         DEGEN_POOLS_IDS: ['2022', '2031'],
         USDTT_USDCC_USDT_USDC_POOL_INDEX: {
           'usdtt.ft.ref-labs.testnet': 0,
