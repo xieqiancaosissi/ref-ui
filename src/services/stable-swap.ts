@@ -461,8 +461,16 @@ export const calc_d = (amp: number, c_amounts: number[]) => {
   let d = sum_amounts;
   for (let i = 0; i < 256; i++) {
     let d_prod = d;
+    let zeroCount = 0;
     for (const c_amount of c_amounts) {
+      if (c_amount === 0) {
+        zeroCount++;
+        continue;
+      }
       d_prod = (d_prod * d) / (c_amount * token_num);
+    }
+    if (zeroCount === token_num) {
+      return 0;
     }
     d_prev = d;
     const ann = amp * token_num ** token_num;

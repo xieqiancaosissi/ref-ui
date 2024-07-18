@@ -3,6 +3,7 @@ import React, { useEffect, useContext } from 'react';
 import { useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Alert from '../alert/Alert';
 import {
   ButtonTextWrapper,
@@ -103,6 +104,7 @@ export default function AddFourLiquidityComponent(props: {
   const intl = useIntl();
   const [canAddLP, setCanAddLP] = useState<boolean>(false);
   const history = useHistory();
+  const location = useLocation();
   const [buttonLoading, setButtonLoading] = useState<boolean>(false);
   const predicedShares = usePredictShares({
     poolId: pool.id,
@@ -498,9 +500,13 @@ export default function AddFourLiquidityComponent(props: {
       string
     ];
 
+    // const queryParams = new URLSearchParams(location.search);
+    // return console.log(queryParams);
+    const queryParams = location.pathname.split('/');
+    return;
     return addLiquidityToStablePool({
-      tokens: tokens,
-      id: Number(USDTT_USDCC_USDT_USDC_POOL_ID),
+      tokens,
+      id: +queryParams[2] || Number(USDTT_USDCC_USDT_USDC_POOL_ID),
       amounts,
       min_shares,
     });

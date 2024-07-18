@@ -852,7 +852,9 @@ function MobileWatchListCard({
               return (
                 <div className="w-full hover:bg-poolRowHover" key={pool.id}>
                   <MobilePoolRow
-                    tokens={poolTokenMetas[pool.id]}
+                    tokens={
+                      poolTokenMetas[pool.id] || Object.values(pool.metas)
+                    }
                     sortBy={sortBy}
                     pool={pool}
                     watched={!!find(watchPools, { id: pool.id })}
