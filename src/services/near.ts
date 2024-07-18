@@ -44,6 +44,7 @@ export const USDTT_USDCC_USDT_USDC_POOL_ID =
 
 export const DEGEN_POOL_ID = config.DEGEN_POOL_ID;
 export const DEGEN_POOL_ID1 = config.DEGEN_POOL_ID1;
+export const DEGEN_POOL_ID2 = config.DEGEN_POOL_ID2;
 
 export const STABLE_POOL_USN_ID = config.STABLE_POOL_USN_ID;
 
@@ -82,6 +83,7 @@ export const {
   FRAX_USDC_POOL_INDEX,
   DEGEN_POOL_INDEX,
   DEGEN_POOL_INDEX1,
+  DEGEN_POOL_INDEX2,
   USDC3E2,
   NEARUSDCC,
 } = getExtraStablePoolConfig();
@@ -137,6 +139,7 @@ export const ALL_STABLE_POOL_IDS = [
   USDT_USDC_POOL_ID,
   FRAX_USDC_POOL_ID,
   DEGEN_POOL_ID1,
+  DEGEN_POOL_ID2,
 ]
   .filter((_) => _)
   .map((id) => id.toString());
@@ -180,6 +183,8 @@ export const getStableTokenIndex = (stable_pool_id: string | number) => {
       return DEGEN_POOL_INDEX;
     case DEGEN_POOL_ID1.toString():
       return DEGEN_POOL_INDEX1;
+    case DEGEN_POOL_ID2.toString():
+      return DEGEN_POOL_INDEX2;
     case USDT_USDC_POOL_ID.toString():
       return USDT_USDC_POOL_INDEX;
     case FRAX_USDC_POOL_ID.toString():
@@ -217,6 +222,7 @@ export const USD_CLASS_STABLE_POOL_IDS = [
   FRAX_USDC_POOL_ID?.toString(),
   DEGEN_POOL_ID?.toString(),
   DEGEN_POOL_ID1?.toString(),
+  DEGEN_POOL_ID2?.toString(),
 ];
 
 export const BTC_CLASS_STABLE_TOKEN_IDS = BTCIDS;

@@ -74,7 +74,7 @@ function StableSwapPage({ pool }: { pool: Pool }) {
     allTokens.filter((item) => STABLE_TOKEN_IDS.indexOf(item.id) > -1);
 
   const nearBalances = useWalletTokenBalances(
-    tokens?.map((token) => token.id) || []
+    tokens?.map((token) => token?.id) || []
   );
   const pool_tokens = useTokens(pool?.tokenIds);
 
@@ -86,7 +86,6 @@ function StableSwapPage({ pool }: { pool: Pool }) {
   if (
     !allTokens ||
     !pool ||
-    !shares ||
     !stablePool ||
     !Object.entries(nearBalances).length
   )

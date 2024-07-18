@@ -416,7 +416,13 @@ export default function getConfig(
         REF_TOKEN_LOCKER_CONTRACT_ID: 'token-locker.ref-labs.testnet',
         DEGEN_POOL_ID: process.env.DEGEN_POOL_ID || 2022,
         DEGEN_POOL_ID1: process.env.DEGEN_POOL_ID1 || 2031,
-        DEGEN_TOKEN_IDS: ['wrap.testnet', 'usdcc.ft.ref-labs.testnet'],
+        DEGEN_POOL_ID2: process.env.DEGEN_POOL_ID2 || 2065,
+        DEGEN_TOKEN_IDS: [
+          'wrap.testnet',
+          'usdcc.ft.ref-labs.testnet',
+          'eth.ft.ref-labs.testnet',
+          'usdtt.ft.ref-labs.testnet',
+        ],
       };
     case 'testnet':
       return {
@@ -828,7 +834,7 @@ export function getExtraStablePoolConfig(
           'usdtt.fakes.testnet': 1,
         },
         RATED_POOLS_IDS: ['568', '571', '1044', '1751', '1752', '1843', '1919'],
-        DEGEN_POOLS_IDS: ['2022', '2031'],
+        DEGEN_POOLS_IDS: ['2022', '2031', '2065'],
         USDTT_USDCC_USDT_USDC_POOL_INDEX: {
           'usdtt.ft.ref-labs.testnet': 0,
           'usdcc.ft.ref-labs.testnet': 1,
@@ -847,6 +853,10 @@ export function getExtraStablePoolConfig(
           'usdcc.ft.ref-labs.testnet': 1,
           'usdte.ft.ref-labs.testnet': 2,
           'usdce.ft.ref-labs.testnet': 3,
+        },
+        DEGEN_POOL_INDEX2: {
+          'eth.ft.ref-labs.testnet': 0,
+          'usdtt.ft.ref-labs.testnet': 1,
         },
       };
     case 'testnet':

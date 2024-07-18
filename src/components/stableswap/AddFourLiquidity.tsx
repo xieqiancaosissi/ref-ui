@@ -500,10 +500,7 @@ export default function AddFourLiquidityComponent(props: {
       string
     ];
 
-    // const queryParams = new URLSearchParams(location.search);
-    // return console.log(queryParams);
     const queryParams = location.pathname.split('/');
-    return;
     return addLiquidityToStablePool({
       tokens,
       id: +queryParams[2] || Number(USDTT_USDCC_USDT_USDC_POOL_ID),

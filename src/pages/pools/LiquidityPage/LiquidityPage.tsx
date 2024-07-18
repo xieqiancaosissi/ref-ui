@@ -122,7 +122,11 @@ import { useAllPoolsV2 } from '../../../state/swapV3';
 import { PoolInfo } from 'src/services/swapV3';
 import { FarmStampNew } from '../../../components/icon/FarmStamp';
 import { ALL_STABLE_POOL_IDS } from '../../../services/near';
-import { DEGEN_POOL_ID, DEGEN_POOL_ID1 } from '../../../services/near';
+import {
+  DEGEN_POOL_ID,
+  DEGEN_POOL_ID1,
+  DEGEN_POOL_ID2,
+} from '../../../services/near';
 import { WatchList } from '../../../store/RefDatabase';
 import { REF_FI_CONTRACT_ID } from '../../../services/near';
 import { FarmBoost } from '../../../services/farm';
@@ -310,7 +314,9 @@ function PoolRow({
               {mark ? (
                 <span className="text-xs text-v3SwapGray bg-watchMarkBackgroundColor px-2.5 py-px rounded-xl ml-2">
                   {ALL_STABLE_POOL_IDS.indexOf(pool.id.toString()) > -1
-                    ? [DEGEN_POOL_ID, DEGEN_POOL_ID1].includes(pool.id)
+                    ? [DEGEN_POOL_ID, DEGEN_POOL_ID1, DEGEN_POOL_ID2].includes(
+                        pool.id
+                      )
                       ? 'Degen'
                       : 'Stable'
                     : 'Classic'}

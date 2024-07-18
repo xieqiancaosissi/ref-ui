@@ -19,6 +19,7 @@ import {
   ALL_STABLE_POOL_IDS,
   DEGEN_POOL_ID,
   DEGEN_POOL_ID1,
+  DEGEN_POOL_ID2,
 } from 'src/services/near';
 import { FarmStampNew, TokenRisk } from 'src/components/icon';
 import { TknIcon } from 'src/components/icon/Common';

@@ -66,9 +66,8 @@ function StableSwapPageUSN({ pool }: { pool: Pool }) {
   const tokens = allTokens
     ? pool.tokenIds.map((id) => allTokens?.find((token) => token?.id === id))
     : [];
-
   const nearBalances = useWalletTokenBalances(
-    tokens?.map((token) => token.id) || []
+    tokens?.map((token) => token?.id) || []
   );
   const [stablePool, setStablePool] = useState<StablePool>();
 
@@ -82,13 +81,9 @@ function StableSwapPageUSN({ pool }: { pool: Pool }) {
     localStorage.setItem(REF_STABLE_SWAP_TAB_KEY, actionName);
     setAction(actionName);
   };
+  console.log(allTokens, stablePool, nearBalances);
 
-  if (
-    !allTokens ||
-    !shares ||
-    !stablePool ||
-    !Object.entries(nearBalances).length
-  )
+  if (!allTokens || !stablePool || !Object.entries(nearBalances).length)
     return <Loading />;
 
   const renderModule = (tab: string) => {
