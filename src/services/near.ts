@@ -112,7 +112,6 @@ export const isStableToken = (id: string) => {
 
 // export const TOKEN_BLACK_LIST = [NEARXIDS[0], 'meta-token.near'];
 export const TOKEN_BLACK_LIST = [NEARXIDS[0]];
-
 export const ALL_STABLE_POOL_IDS = [
   STABLE_POOL_ID,
   USDTT_USDCC_USDT_USDC_POOL_ID,
@@ -128,7 +127,7 @@ export const ALL_STABLE_POOL_IDS = [
   USDT_USDC_POOL_ID,
   FRAX_USDC_POOL_ID,
 ]
-  .filter((_) => _)
+  // .filter((_) => _)
   .map((id) => id.toString());
 
 export const BLACKLIST_POOL_IDS = config.BLACKLIST_POOL_IDS;
