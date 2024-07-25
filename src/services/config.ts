@@ -159,7 +159,6 @@ export default function getConfig(
         sodakiApiUrl: 'https://api.stats.ref.finance/api',
         newSodakiApiUrl: 'https://api.data-service.ref.finance/api',
         txIdApiUrl: 'https://api3.nearblocks.io',
-        memeRankApiUrl: 'https://api.ref.finance',
         blackList: process.env.FARM_BLACK_LIST || ['1371#3', '2769#2'],
         WRAP_NEAR_CONTRACT_ID: process.env.WRAP_NEAR_CONTRACT_ID || 'wrap.near',
         REF_ADBOARD_CONTRACT_ID: 'ref-adboard.near',
@@ -284,12 +283,10 @@ export default function getConfig(
         explorerUrl: 'https://nearblocks.io',
         pikespeakUrl: 'https://pikespeak.ai',
         nearExplorerUrl: 'https://explorer.near.org/',
-        // indexerUrl: 'https://api.ref.finance',
         indexerUrl: 'https://mainnet-indexer.ref-finance.com',
         sodakiApiUrl: 'https://api.stats.ref.finance/api',
         newSodakiApiUrl: 'https://api.data-service.ref.finance/api',
         txIdApiUrl: 'https://api3.nearblocks.io',
-        memeRankApiUrl: 'https://api.ref.finance',
         blackList: process.env.FARM_BLACK_LIST || ['1371#3', '2769#2'],
         REF_FI_CONTRACT_ID:
           process.env.REF_FI_CONTRACT_ID || 'v2.ref-finance.near',
@@ -425,7 +422,6 @@ export default function getConfig(
         sodakiApiUrl: 'https://api.stats.ref.finance/api',
         newSodakiApiUrl: 'https://api.data-service.ref.finance/api',
         txIdApiUrl: 'https://api-testnet.nearblocks.io',
-        memeRankApiUrl: 'https://test.api.cclp.finance',
         blackList: process.env.FARM_BLACK_LIST || ['1371#3'],
         REF_FI_CONTRACT_ID:
           process.env.REF_FI_CONTRACT_ID || 'ref-finance-101.testnet',
@@ -530,7 +526,6 @@ export default function getConfig(
         sodakiApiUrl: 'https://api.stats.ref.finance/api',
         newSodakiApiUrl: 'https://api.data-service.ref.finance/api',
         txIdApiUrl: 'https://api-testnet.nearblocks.io',
-        memeRankApiUrl: 'https://test.api.cclp.finance',
         blackList: process.env.FARM_BLACK_LIST || ['1371#3'],
         REF_FI_CONTRACT_ID:
           process.env.REF_FI_CONTRACT_ID || 'exchange.ref-dev.testnet',
@@ -630,11 +625,9 @@ export default function getConfig(
         pikespeakUrl: 'https://pikespeak.ai',
         nearExplorerUrl: 'https://explorer.near.org/',
         indexerUrl: 'https://api.ref.finance',
-        // indexerUrl: 'https://apiself.cclp.finance',
         sodakiApiUrl: 'https://api.stats.ref.finance/api',
         newSodakiApiUrl: 'https://api.data-service.ref.finance/api',
         txIdApiUrl: 'https://api3.nearblocks.io',
-        memeRankApiUrl: 'https://api.ref.finance',
         blackList: process.env.FARM_BLACK_LIST || ['1371#3', '2769#2'],
         REF_FI_CONTRACT_ID:
           process.env.REF_FI_CONTRACT_ID || 'v2.ref-finance.near',

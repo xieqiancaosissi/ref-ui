@@ -160,7 +160,7 @@ export const currentTokensPrice = async (ids: string): Promise<any> => {
 };
 
 export const getMemeFarmingTokens = async (): Promise<any> => {
-  return await fetch(config.memeRankApiUrl + '/v3/meme-farming/tokens', {
+  return await fetch(config.indexerUrl + '/v3/meme-farming/tokens', {
     method: 'GET',
   })
     .then((res) => res.json())
@@ -183,7 +183,7 @@ export const getMemeFarmingTotalAssetsList = async (
     order_by: orderBy,
   });
   const url = `${
-    config.memeRankApiUrl
+    config.indexerUrl
   }/v3/meme-farming/total?${queryParams.toString()}`;
 
   return await fetch(url, {
@@ -213,7 +213,7 @@ export const getMemeFarmingAssetsList = async (
     order_by: orderBy,
   });
   const url = `${
-    config.memeRankApiUrl
+    config.indexerUrl
   }/v3/meme-farming/list?${queryParams.toString()}`;
 
   return await fetch(url, {
