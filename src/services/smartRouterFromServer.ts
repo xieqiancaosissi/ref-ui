@@ -51,7 +51,7 @@ export const estimateSwapFromServer = async ({
   const domain =
     env === 'pub-testnet'
       ? 'smartroutertest.refburrow.top'
-      : env == 'private-mainnet'
+      : env === 'privateMainnet'
       ? 'smartrouter.preprd.ref-finance.com'
       : 'smartrouter.ref.finance';
   const resultFromServer = await fetch(
