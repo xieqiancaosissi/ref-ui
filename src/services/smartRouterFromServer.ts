@@ -51,6 +51,8 @@ export const estimateSwapFromServer = async ({
   const domain =
     env === 'pub-testnet'
       ? 'smartroutertest.refburrow.top'
+      : env == 'private-mainnet'
+      ? 'smartrouter.preprd.ref-finance.com'
       : 'smartrouter.ref.finance';
   const resultFromServer = await fetch(
     `https://${domain}/findPath?amountIn=${amountIn}&tokenIn=${
