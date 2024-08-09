@@ -422,11 +422,16 @@ export default function getConfig(
         DEGEN_POOL_ID: process.env.DEGEN_POOL_ID || 2022,
         DEGEN_POOL_ID1: process.env.DEGEN_POOL_ID1 || 2031,
         DEGEN_POOL_ID2: process.env.DEGEN_POOL_ID2 || 2065,
+        ZTOKEN_USDC_POOL_ID: 2120,
         DEGEN_TOKEN_IDS: [
           'wrap.testnet',
           'usdcc.ft.ref-labs.testnet',
           'eth.ft.ref-labs.testnet',
           'usdtt.ft.ref-labs.testnet',
+        ],
+        ZTOKEN_USDC_TOKEN_IDS: [
+          'rated-swap.guild-covenant.testnet',
+          'usdc.fakes.testnet',
         ],
       };
     case 'testnet':
@@ -848,6 +853,7 @@ export function getExtraStablePoolConfig(
           '1843',
           '1919',
           '2089',
+          '2120',
         ],
         USDTT_USDCC_USDT_USDC_POOL_INDEX: {
           'usdtt.ft.ref-labs.testnet': 0,
@@ -875,6 +881,10 @@ export function getExtraStablePoolConfig(
         DEGEN_POOL_INDEX2: {
           'eth.ft.ref-labs.testnet': 0,
           'usdtt.ft.ref-labs.testnet': 1,
+        },
+        ZTOKEN_USDC_POOL_INDEX: {
+          'rated-swap.guild-covenant.testnet': 0,
+          'usdc.fakes.testnet': 1,
         },
       };
     case 'testnet':
