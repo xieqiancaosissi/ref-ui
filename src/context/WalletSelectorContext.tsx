@@ -29,6 +29,7 @@ import { setupWalletConnect } from '@near-wallet-selector/wallet-connect';
 import { setupNearMobileWallet } from '@near-wallet-selector/near-mobile-wallet';
 import { setupOKXWallet } from '@near-wallet-selector/okx-wallet';
 import { setupMintbaseWallet } from '@near-wallet-selector/mintbase-wallet';
+import { setupBitgetWallet } from '@near-wallet-selector/bitget-wallet';
 
 import '@near-wallet-selector/modal-ui/styles.css';
 import { near } from '../services/near';
@@ -219,6 +220,7 @@ export const WalletSelectorContextProvider: React.FC<any> = ({ children }) => {
           contractId: CONTRACT_ID,
           deprecated: false,
         }),
+        setupBitgetWallet({}),
       ],
     });
     const _modal = setupModal(_selector, {
