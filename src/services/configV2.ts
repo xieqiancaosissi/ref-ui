@@ -47,7 +47,10 @@ export default function getConfig(
         ],
         ORDRRBOOK_COLLATTERAL_TOKEN: 'usdc.orderly.testnet',
         BLACK_LIST_DCL_POOL_IDS_IN_POOLS: [],
-        WHITE_LIST_DCL_POOL_IDS_IN_LIMIT_ORDERS: [],
+        WHITE_LIST_DCL_POOL_IDS_IN_LIMIT_ORDERS: [
+          '853d95.fakes.testnet|wrap.testnet|2000',
+          'eth.fakes.testnet|wrap.testnet|400',
+        ],
       };
     case 'testnet':
       return {

@@ -138,6 +138,7 @@ const testnet_tokens = {
   'usdt.develop.v1.omomo-finance.testnet': 'USDT',
   'wnear.develop.v1.omomo-finance.testnet': 'WNEAR',
   '3e2210e1184b45b64c8a434c0a7e7b23cc04ea7eb7a6c3c32520d03d4afcb8af': 'USDC',
+  '853d95.fakes.testnet': 'FRAX',
 };
 
 export function getTokens() {
